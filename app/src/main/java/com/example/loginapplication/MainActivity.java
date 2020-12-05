@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
                     if (!isValid){
                         counter--;
                         Toast.makeText(MainActivity.this,"Incorrect Credentials!",Toast.LENGTH_LONG).show();
+
+                        eAttemptsInfo.setText("No. of Attempts remaining: " + counter);
                         if (counter==0){
                             eLogin.setEnabled(false);
                         }
