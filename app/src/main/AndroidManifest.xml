@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginApplication"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".ResetActivity"></activity>
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".HomePageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

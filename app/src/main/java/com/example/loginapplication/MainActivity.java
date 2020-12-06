@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button eLogin;
     private Button eSignup;
     private TextView eAttemptsInfo;
+    private TextView eforgotPass;
 
 //    private String Username="Admin";
 //    private String Password="12345678";
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         eLogin=findViewById(R.id.btnLogin);
         eSignup=findViewById(R.id.btnSignUp);
         eAttemptsInfo=findViewById(R.id.tvAttemptsInfo);
+        eforgotPass=findViewById(R.id.tvforgotpassword);
+
         //set an onclick listener on the button
         eLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"redirecting to signup page!",Toast.LENGTH_LONG).show();
 
                 Intent intent=new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        eforgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),ForgotPasswordActivity.class);
                 startActivity(intent);
             }
         });
